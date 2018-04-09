@@ -17,8 +17,6 @@ class QuiverlyRivalry extends PluginBase
     public $tools = [];
     public $armor = [];
     public $blocks = [];
-    public $specials = [];
-    public $masks = [];
 
     public $category;
 
@@ -35,7 +33,7 @@ class QuiverlyRivalry extends PluginBase
             $this->$name = $plugin;
         }
         $this->saveDefaultConfig();
-        foreach (["weapons", "tools", "armor", "blocks", "specials", "masks"] as $category) {
+        foreach (["weapons", "tools", "armor", "blocks"] as $category) {
             $this->$category = $this->getConfig()->getNested("items." . $category);
         }
         $this->getLogger()->info("ShopUI by Quiverly and a pig! Remember I am a developer for hire!");
@@ -60,7 +58,7 @@ class QuiverlyRivalry extends PluginBase
         $form = $this->formapi->createSimpleForm(function (Player $player, array $data) {
             if (isset($data[0])) {
                 $result = $data[0];
-                $categories = [0 => "weapons", 1 => "tools", 2 => "armor", 3 => "blocks", 4 => "specials", 5 => "masks"];
+                $categories = [0 => "weapons", 1 => "tools", 2 => "armor", 3 => "blocks"];
                 switch ($result) {
                     case 6:
                         return;
