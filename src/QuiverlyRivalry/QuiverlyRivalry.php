@@ -42,7 +42,7 @@ class QuiverlyRivalry extends PluginBase
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool
     {
         switch ($cmd->getName()) {
-            case "shopui":
+            case "shop":
                 if ($sender instanceof Player) {
                     $this->mainForm($sender);
                     return true;
