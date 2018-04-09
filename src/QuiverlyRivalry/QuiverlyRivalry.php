@@ -79,8 +79,6 @@ class QuiverlyRivalry extends PluginBase
         $form->addButton(TextFormat::WHITE . "Tools");
         $form->addButton(TextFormat::WHITE . "Armour");
         $form->addButton(TextFormat::WHITE . "Blocks");
-        $form->addButton(TextFormat::WHITE . "Special Items");
-        $form->addButton(TextFormat::WHITE . "Masks");
         $form->addButton(TextFormat::GREEN . "Exit");
         $form->sendToPlayer($player);
     }
